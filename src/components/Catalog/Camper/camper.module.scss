@@ -1,0 +1,83 @@
+@import "src/styles/mixins";
+@import "src/styles/color";
+
+.camperWrapper {
+  margin-bottom: 44px;
+  .wrapper {
+    margin-bottom: 24px;
+    > h2 {
+      @include text-style-h-2;
+      margin-bottom: 8px;
+    }
+    .details {
+      @include reviews-location;
+      margin-bottom: 16px;
+    }
+    > p {
+      @include text-style-h-2;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    > li {
+      border-radius: 10px;
+      width: 290px;
+      height: 310px;
+      > img {
+        height: 100%;
+        min-height: max-content;
+        object-fit: cover;
+      }
+    }
+  }
+  .descrWrapper {
+    overflow-y: auto;
+    height: 70px;
+    // > p {
+    //   display: -webkit-box;
+    //   -webkit-box-orient: vertical;
+    //   -webkit-line-clamp: 3; /* Кількість рядків */
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    // }
+  }
+}
+
+.tabWrapper {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
+  margin-bottom: 44px;
+  > button {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    background-color: transparent;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -27px;
+      width: 0;
+      height: 2px;
+      background-color: $color-button;
+      transition: width 0.3s;
+      height: 5px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+    }
+
+    &.active::after {
+      width: 100%;
+    }
+  }
+}

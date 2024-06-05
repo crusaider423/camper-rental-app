@@ -1,0 +1,76 @@
+@import "src/styles/mixins";
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.wroper {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+  // background-color: antiquewhite;
+  display: flex;
+  gap: 24px;
+  .image {
+    overflow: hidden;
+    width: 290px;
+    height: 310px;
+    border-radius: 10px;
+    img {
+      object-position: left;
+      height: 100%;
+      min-height: max-content;
+      object-fit: cover;
+    }
+  }
+}
+
+.cover {
+  display: flex;
+  width: 526px;
+  flex-direction: column;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    h2 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 20px;
+      @include text-style-h-2;
+      transition: max-height 0.3s ease;
+      max-height: 60px;
+    }
+    p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      fill: none;
+      stroke: $color-main;
+      @include text-style-h-2;
+    }
+  }
+  .details {
+    @include reviews-location;
+    margin-bottom: 24px;
+  }
+  .descr {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color-text;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .detailsList {
+    @include feature-list;
+    margin-bottom: 24px;
+  }
+  button {
+    @include btn;
+  }
+}

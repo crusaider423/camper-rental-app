@@ -1,0 +1,60 @@
+@import "./src/styles/color";
+@import "./src/styles/mixins";
+.formWrapper {
+  > h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  > p {
+    color: $color-text;
+    margin-bottom: 24px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    .label {
+      @include visually-hidden;
+    }
+    .input {
+      @include input;
+    }
+    .datePickerWrapper {
+
+       position: relative;
+      display: flex;
+      align-items: center;
+
+      .datePickerInput {
+        @include input();
+        
+        // flex: 1;
+      }
+
+      .calendarIcon {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+      }
+    }
+
+    .textarea {
+      @include input;
+      height: 114px;
+      //   overflow: hidden;
+      resize: none;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn {
+      @include btn;
+      padding: 16px 60px;
+      width: 160px;
+      margin-top: 24px;
+    }
+  }
+}

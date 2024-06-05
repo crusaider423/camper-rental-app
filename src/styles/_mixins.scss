@@ -1,0 +1,93 @@
+@import "color";
+
+@mixin text-style-h-2() {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+@mixin btn() {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  border-radius: 200px;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
+  background-color: $color-button;
+  transition: background-color 0.3s ease;
+  &:hover,
+  &:focus {
+    background-color: $color-button-pressed;
+  }
+}
+
+@mixin reviews-location() {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+
+  > p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  > p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    fill: none;
+    stroke: $color-main;
+  }
+}
+
+@mixin feature-list() {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  > li {
+    display: flex;
+    gap: 8px;
+    stroke: $color-main;
+    fill: none;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    font-weight: 500;
+    line-height: 1.25;
+    border-radius: 100px;
+    padding: 12px 18px;
+    background-color: $color-block-features;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin input() {
+  margin-bottom: 14px;
+  border-radius: 10px;
+  padding: 18px 18px 18px 18px;
+  background: $color-inputs;
+  font-family: inherit;
+  width: 400px;
+  border-width: 0;
+  &::placeholder {
+    color: rgba(16, 24, 40, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}

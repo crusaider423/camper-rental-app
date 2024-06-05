@@ -1,0 +1,89 @@
+@import "src/styles/color";
+@import "src/styles/mixins";
+
+.tabWrapper {
+  display: flex;
+  gap: 24px;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  .vehicleDetails {
+    width: 430px;
+    .features {
+      @include feature-list;
+      margin-bottom: 44px;
+    }
+    > p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--main);
+      padding-bottom: 23px;
+      border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+      margin-bottom: 24px;
+    }
+    .detailsList {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.33;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      > li {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .formWrapper {
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    border-radius: 10px;
+    padding: 24px;
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+// -----------------------------------------------
+
+.comentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .commentWrrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    .letter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: $color-block-features;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.25;
+      color: $color-button;
+    }
+    .nameWrraper {
+      .name {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.33;
+        margin-bottom: 4px;
+      }
+      .rating {
+        display: flex;
+        fill: transparent;
+      }
+    }
+  }
+  .text {
+    color: $color-text;
+  }
+}
+
+
