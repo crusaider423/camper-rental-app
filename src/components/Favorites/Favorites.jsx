@@ -1,13 +1,5 @@
 const Favorites = () => {
-  return (
-    const hendelFavorit=()=>{
-
-    }
-    <div>
-      <h1>favorites</h1>
-      
-    </div>
-  );
+  return <h1>favorites</h1>;
 };
 
 export default Favorites;
