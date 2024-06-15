@@ -20,7 +20,7 @@ const Reviews = ({ item }) => {
 //       </li>
 //     ));
   const comments = item.reviews.map(
-    ({ reviewer_name, comment, reviewer_rating }, i) => (
+    ({ reviewer_name, comment }, i) => (
       <li key={i} className={scss.list}>
         <div className={scss.commentWrrapper}>
           <span className={scss.letter}>{reviewer_name[0]}</span>
